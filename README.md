@@ -1,70 +1,16 @@
-# SEIS Squeek Companion
+# React + Vite
 
-A non-custodial SqueekChain companion application for the SEIS TERMINAL ecosystem.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Project Objective
+Currently, two official plugins are available:
 
-Build a functional, responsive Web3 application that helps SqueekChain users connect their wallets, explore verified on-chain assets, and organize their personal Squeek NFT collections.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-This project is developed independently from the existing SEIS TERMINAL production application.
+## React Compiler
 
-## Technology
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- React + Vite
-- JavaScript
-- ethers v6
-- Responsive CSS
-- EIP-1193 wallet integration
+## Expanding the ESLint configuration
 
-## Required Features
-
-### 1. Wallet Connection
-- Connect an EIP-1193-compatible wallet.
-- Display the connected wallet address.
-- Detect account and network changes.
-- Support SqueekChain network switching with explicit user approval.
-- Handle disconnected and unsupported-network states.
-
-### 2. SqueekChain Integration
-- Research and use verified SqueekChain network configuration.
-- Read native wallet balances through a verified RPC.
-- Display transaction explorer links where supported.
-- Never invent RPC URLs, contract addresses, or blockchain data.
-
-### 3. Squeek NFT Workspace
-- Display verified NFT ownership data when an appropriate data source is available.
-- Allow users to create and manage personal NFT watchlists.
-- Support searching, filtering, and organizing saved collections.
-- Allow users to export or share watchlists.
-- Clearly distinguish on-chain data from user-created watchlist entries.
-
-### 4. User Interface
-- Dark Web3 terminal design.
-- Responsive desktop and mobile layouts.
-- Dashboard, Wallet, Collections, and Settings sections.
-- Clear loading, error, and empty states.
-
-## Security Requirements
-
-- Never request or store seed phrases or private keys.
-- Do not include API secrets in client-side code.
-- Do not deploy smart contracts or initiate transactions without explicit approval.
-- Validate external data.
-- Never modify the existing SEIS TERMINAL production application.
-
-## Deliverables
-
-- Complete React/Vite application.
-- Working wallet connection and network detection.
-- Functional interactive NFT watchlist.
-- Verified blockchain integrations where available.
-- Build instructions and documentation.
-- Production-ready static build suitable for IPFS hosting.
-
-## Acceptance Criteria
-
-The application must compile successfully and provide usable interactive functionality. Any unsupported SqueekChain integration must be clearly documented instead of simulated or presented as working.
-
-## Future Integration
-
-This module may later be integrated into SEIS TERMINAL, but no changes to the production repository or website are authorized in this Job.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
